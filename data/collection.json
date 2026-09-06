@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": "DcvmsV2GScT",
+      "category": "shopping",
+      "country": "日本",
+      "brand": "茅乃舍",
+      "author": "pei___0616",
+      "source": "https://www.threads.com/@pei___0616/post/DcvmsV2GScT",
+      "savedAt": "2026-09-06",
+      "summary": "作者推薦茅乃舍高湯包，認為料理方便，並提到日本與台灣有價差。",
+      "priceNote": "清單保留原圖 $ 符號，幣別與販售通路待確認；非日本店面即時售價。另有網頁截圖標示特選極致高湯包 8g×12 袋 NT$1,200。",
+      "location": "日本，確切門市未註明",
+      "products": [
+        {
+          "name": "特選極致高湯包",
+          "japanese": "特選 茅乃舎 極みだし",
+          "price": "12 袋 $799",
+          "image": "e7194dd85b024688"
+        },
+        {
+          "name": "柴魚昆布高湯包",
+          "japanese": "茅乃舎だし",
+          "price": "5 袋 $180 · 12 袋 $420 · 30 袋 $699",
+          "image": "38da61bfbb66e9cc"
+        },
+        {
+          "name": "減鹽柴魚昆布高湯包",
+          "japanese": "減塩 茅乃舎だし",
+          "price": "5 袋 $200 · 15 袋 $450 · 27 袋 $699",
+          "image": "38da61bfbb66e9cc"
+        },
+        {
+          "name": "雞高湯包",
+          "japanese": "鶏だし",
+          "price": "5 袋 $250 · 16 袋 $699",
+          "image": "b70d2e01d15e4373"
+        },
+        {
+          "name": "小魚干高湯包",
+          "japanese": "煮干しだし",
+          "price": "5 袋 $180 · 30 袋 $699",
+          "image": "425581e7d27b98b1"
+        },
+        {
+          "name": "椎茸高湯包",
+          "japanese": "椎茸だし",
+          "price": "5 袋 $250 · 20 袋 $699",
+          "image": "c341e2f56ceaac45"
+        },
+        {
+          "name": "昆布高湯包",
+          "japanese": "昆布だし",
+          "price": "5 袋 $200 · 24 袋 $699",
+          "image": "455b806d1484c846"
+        },
+        {
+          "name": "蔬菜高湯包",
+          "japanese": "野菜だし",
+          "price": "5 袋 $200 · 12 袋 $450 · 24 袋 $699",
+          "image": "7f78e82c72fb6484"
+        },
+        {
+          "name": "減鹽蔬菜高湯包",
+          "japanese": "減塩 野菜だし",
+          "price": "5 袋 $200 · 22 袋 $699",
+          "image": "7f78e82c72fb6484"
+        },
+        {
+          "name": "茶碗蒸料理包",
+          "japanese": "茶碗蒸しのもと",
+          "price": "4 袋 $290",
+          "image": "919dabeaa4491edd"
+        },
+        {
+          "name": "玉子燒料理包",
+          "japanese": "だし巻き玉子のもと",
+          "price": "4 袋 $250",
+          "image": "dfcf017f04a59b41"
+        }
+      ]
+    }
+  ]
+}
