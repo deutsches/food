@@ -54,7 +54,7 @@ export default function FoodTable() {
     finally { setBusy(false); }
   }
   const allItems = [
-    ...data.items.map(item => ({ ...item, country: '日本', category: '燒肉', sourceUrl: `https://www.threads.com/@fattsai/post/${item.sourcePart}` })),
+    ...data.items.map(item => ({ ...item, country: '日本', category: '燒肉', sourceUrl: `https://www.threads.com/@fattsai/post/${item.sourcePart}`, mapUrl: null as string | null })),
     ...taiwanData.items.map(item => ({ ...item, country: '台灣', sourceUrl: null as string | null })),
   ];
   const categoryOf = (item: typeof allItems[number]) => assignments[item.number] || item.category;
@@ -80,7 +80,7 @@ export default function FoodTable() {
         <TableCell><NativeSelect aria-label={`${item.name}的分類`} value={categoryOf(item)} disabled={!ready || busy} onChange={e => void change(item.number, e.target.value)}>{visibleCategories.map(category => <option key={category}>{category}</option>)}</NativeSelect></TableCell>
         <TableCell className="shop-cell"><strong>{item.name}</strong>{item.dishes && <p>{item.dishes}</p>}{[18, 29].includes(item.number) && <small>原文第 18、29 筆可能為同店，待確認</small>}</TableCell>
         <TableCell><span className="area-label">{item.area || '待補'}</span></TableCell>
-        <TableCell><a className="map-link" href={mapsLink(item.name, item.area, item.country)} target="_blank" rel="noreferrer"><MapPin size={15}/>搜尋地圖</a></TableCell>
+        <TableCell><a className="map-link" href={item.mapUrl || mapsLink(item.name, item.area, item.country)} target="_blank" rel="noreferrer"><MapPin size={15}/>{item.mapUrl ? '開啟地圖' : '搜尋地圖'}</a></TableCell>
         <TableCell>{item.sourceUrl ? <a className="source-link" aria-label={`${item.name}的 Threads 原文`} href={item.sourceUrl} target="_blank" rel="noreferrer"><ExternalLink size={15}/><span>原文</span></a> : <span className="area-label">直接記錄</span>}</TableCell>
       </TableRow>)}
       {!items.length && <TableRow><TableCell colSpan={5} className="food-empty">{!countryItems.length ? `${country}還沒有收藏。貼上文章後，就能把店家收進這裡。` : query ? '沒有符合搜尋的店家。' : `「${filter}」還沒有店家。可以從「全部」裡更換店家分類。`}</TableCell></TableRow>}

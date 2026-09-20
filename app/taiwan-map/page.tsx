@@ -17,7 +17,7 @@ export default function TaiwanMapPage() {
     <p className="meta map-help">地圖內容由 Google My Maps 提供；在 My Maps 更新後，這一頁也會顯示最新內容。</p>
     <section className="map-directory">
       <div className="section-title"><h2>台灣店家清單</h2><span>{taiwanData.items.length} 筆 · 地址待補</span></div>
-      <div className="map-directory-grid">{['拉麵', '漢堡'].map(category => <div className="map-directory-group" key={category}><h3>{category}</h3>{taiwanData.items.filter(item => item.category === category).map(item => <a key={item.number} href={mapsLink(item.name, item.area, taiwanData.country)} target="_blank" rel="noreferrer"><span>{item.name}</span><small>搜尋位置 ↗</small></a>)}</div>)}</div>
+      <div className="map-directory-grid">{['拉麵', '漢堡'].map(category => <div className="map-directory-group" key={category}><h3>{category}</h3>{taiwanData.items.filter(item => item.category === category).map(item => <a key={item.number} href={item.mapUrl || mapsLink(item.name, item.area, taiwanData.country)} target="_blank" rel="noreferrer"><span>{item.name}</span><small>{item.mapUrl ? '已定位 ↗' : '搜尋位置 ↗'}</small></a>)}</div>)}</div>
       <p className="meta">目前只有店名與分類，尚未放入 My Maps 標記；有地址後再定位，避免標到錯誤店家。</p>
     </section>
   </main>;
