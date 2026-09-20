@@ -1,6 +1,7 @@
 import { addCategory, assignCategory, readCollection } from '@/db';
 import { defaultCategories, normalizeCategory } from '@/lib/food-categories';
 import food from '@/data/food.json';
+import taiwanFood from '@/data/taiwan-food.json';
 
 export const dynamic = 'force-dynamic';
 const json = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
@@ -31,7 +32,7 @@ async function mutate(request: Request, assign: boolean) {
   if (name === '全部') return json({ error: '「全部」用於顯示所有店家，請選擇其他分類名稱。' }, 400);
   try {
     if (assign) {
-      if (!food.items.some(item => item.number === body.itemNumber)) return json({ error: '找不到這筆店家。' }, 400);
+      if (![...food.items, ...taiwanFood.items].some(item => item.number === body.itemNumber)) return json({ error: '找不到這筆店家。' }, 400);
       const current = await readCollection(user);
       if (![...defaultCategories, ...current.categories].includes(name)) return json({ error: '請先新增這個分類。' }, 400);
       await assignCategory(user, body.itemNumber as number, name);
