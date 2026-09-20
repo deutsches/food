@@ -1,11 +1,11 @@
 {
   "country": "台灣",
   "savedAt": "2026-09-20",
-  "note": "由使用者直接提供店名與分類；地址、餐點與原文尚未提供，因此未另行搜尋或補充。",
+  "note": "店名、分類與 Google Maps 連結由使用者提供；地址僅依這些連結顯示的店家資訊補入。",
   "items": [
     { "number": 10001, "name": "麵屋千雲林森店", "category": "拉麵", "area": "10491 臺北市中山區正義里林森北路 105-1 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/bGPEs642kgiBiRZp9" },
-    { "number": 10002, "name": "麒麟創作拉麵坊", "category": "拉麵", "area": "", "dishes": "", "mapUrl": null },
-    { "number": 10003, "name": "patty addy", "category": "漢堡", "area": "", "dishes": "", "mapUrl": null },
-    { "number": 10004, "name": "lay back", "category": "漢堡", "area": "", "dishes": "", "mapUrl": null }
+    { "number": 10002, "name": "麒麟創作拉麵坊", "category": "拉麵", "area": "10491 臺北市中山區中山北路一段 140 巷 25 號 1 樓", "dishes": "", "mapUrl": "https://maps.app.goo.gl/KHkxZU6kKiAB1uHi8" },
+    { "number": 10003, "name": "Patty Addy Burger", "category": "漢堡", "area": "106071 臺北市大安區大安路一段 51 巷 23 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/f1puXyiGBXK1gUuN7" },
+    { "number": 10004, "name": "butcher jr. by lanpengyou 中山", "category": "漢堡", "area": "104 臺北市中山區南京西路 12 巷 13 弄 3 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/2eZcvNWs4hfEBymm8" }
   ]
 }
