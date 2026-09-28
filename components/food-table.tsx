@@ -25,6 +25,7 @@ export default function FoodTable() {
   const [draft, setDraft] = useState('');
   const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [signedOut, setSignedOut] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   async function load() {
@@ -32,7 +33,11 @@ export default function FoodTable() {
     try {
       const result = await api();
       setCategories(result.categories); setAssignments(result.assignments); setReady(true);
-    } catch (err) { setError((err as Error).message); }
+    } catch (err) {
+      const detail = (err as Error).message;
+      if (detail.startsWith('請先登入')) setSignedOut(true);
+      else setError(detail);
+    }
   }
   useEffect(() => { void load(); }, []);
   async function create(event: FormEvent) {
@@ -68,13 +73,13 @@ export default function FoodTable() {
       <div className="country-tabs" aria-label="選擇國家">{['台灣', '日本'].map(name => <button key={name} type="button" aria-pressed={country === name} onClick={() => { setCountry(name); setFilter('全部'); setQuery(''); }}>{name}<span>{allItems.filter(item => item.country === name).length} 筆店家</span></button>)}</div>
       <div className="category-tabs" aria-label={`${country}的美食分類`}>{['全部', ...visibleCategories].map(category => <button key={category} type="button" aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}<span>{category === '全部' ? countryItems.length : countryItems.filter(item => categoryOf(item) === category).length}</span></button>)}</div>
       <div className="table-toolbar"><label className="food-search"><Search size={17} aria-hidden="true"/><Input aria-label="搜尋店名或地區" placeholder="搜尋店名、地區或餐點" value={query} onChange={e => setQuery(e.target.value)}/></label>
-        <form className="category-form" onSubmit={create}><Input aria-label="新分類名稱" placeholder="新增分類，例如：拉麵" value={draft} maxLength={30} onChange={e => setDraft(e.target.value)} disabled={!ready || busy}/><Button type="submit" disabled={!ready || busy || !draft.trim()}><Plus size={16}/>{busy ? '儲存中' : '新增分類'}</Button></form>
+        {signedOut ? <span className="meta">公開瀏覽模式 · 登入後可編輯分類</span> : <form className="category-form" onSubmit={create}><Input aria-label="新分類名稱" placeholder="新增分類，例如：拉麵" value={draft} maxLength={30} onChange={e => setDraft(e.target.value)} disabled={!ready || busy}/><Button type="submit" disabled={!ready || busy || !draft.trim()}><Plus size={16}/>{busy ? '儲存中' : '新增分類'}</Button></form>}
       </div>
-      {!ready && !error && <p className="meta" role="status">正在載入你的分類…</p>}
+      {!ready && !error && !signedOut && <p className="meta" role="status">正在載入你的分類…</p>}
       {error && <p className="food-error" role="alert">{error} {!ready && <Button variant="outline" onClick={load}>重試</Button>}</p>}
       <p className="food-feedback" role="status">{message}</p>
     </div>
-    <div className="table-caption"><span>{country} / {filter} · {items.length} 筆</span><span>可直接更換每家店的分類</span></div>
+    <div className="table-caption"><span>{country} / {filter} · {items.length} 筆</span><span>{signedOut ? '公開訪客可瀏覽清單' : '可直接更換每家店的分類'}</span></div>
     <div className="food-table"><Table><TableHeader><TableRow><TableHead>分類</TableHead><TableHead>店名 / 作者推薦</TableHead><TableHead>地區</TableHead><TableHead>Google Maps</TableHead><TableHead>出處</TableHead></TableRow></TableHeader><TableBody>
       {items.map(item => <TableRow key={item.number}>
         <TableCell><NativeSelect aria-label={`${item.name}的分類`} value={categoryOf(item)} disabled={!ready || busy} onChange={e => void change(item.number, e.target.value)}>{visibleCategories.map(category => <option key={category}>{category}</option>)}</NativeSelect></TableCell>
