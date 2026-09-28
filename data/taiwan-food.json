@@ -1,11 +1,79 @@
 {
   "country": "台灣",
-  "savedAt": "2026-09-20",
+  "savedAt": "2026-09-28",
   "note": "店名、分類與 Google Maps 連結由使用者提供；地址僅依這些連結顯示的店家資訊補入。",
   "items": [
-    { "number": 10001, "name": "麵屋千雲林森店", "category": "拉麵", "area": "10491 臺北市中山區正義里林森北路 105-1 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/bGPEs642kgiBiRZp9" },
-    { "number": 10002, "name": "麒麟創作拉麵坊", "category": "拉麵", "area": "10491 臺北市中山區中山北路一段 140 巷 25 號 1 樓", "dishes": "", "mapUrl": "https://maps.app.goo.gl/KHkxZU6kKiAB1uHi8" },
-    { "number": 10003, "name": "Patty Addy Burger", "category": "漢堡", "area": "106071 臺北市大安區大安路一段 51 巷 23 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/f1puXyiGBXK1gUuN7" },
-    { "number": 10004, "name": "butcher jr. by lanpengyou 中山", "category": "漢堡", "area": "104 臺北市中山區南京西路 12 巷 13 弄 3 號", "dishes": "", "mapUrl": "https://maps.app.goo.gl/2eZcvNWs4hfEBymm8" }
+    {
+      "number": 10001,
+      "name": "麵屋千雲林森店",
+      "category": "拉麵",
+      "area": "10491 臺北市中山區正義里林森北路 105-1 號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/bGPEs642kgiBiRZp9"
+    },
+    {
+      "number": 10002,
+      "name": "麒麟創作拉麵坊",
+      "category": "拉麵",
+      "area": "10491 臺北市中山區中山北路一段 140 巷 25 號 1 樓",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/KHkxZU6kKiAB1uHi8"
+    },
+    {
+      "number": 10003,
+      "name": "Patty Addy Burger",
+      "category": "漢堡",
+      "area": "106071 臺北市大安區大安路一段 51 巷 23 號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/f1puXyiGBXK1gUuN7"
+    },
+    {
+      "number": 10004,
+      "name": "butcher jr. by lanpengyou 中山",
+      "category": "漢堡",
+      "area": "104 臺北市中山區南京西路 12 巷 13 弄 3 號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/2eZcvNWs4hfEBymm8"
+    },
+    {
+      "number": 10005,
+      "name": "ピーター商店/らぁ麺Pete/拉麵彼得",
+      "category": "拉麵",
+      "area": "106臺北市大安區光武里大安路一段52巷22號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/6kTSg8HU6KkYVgENA"
+    },
+    {
+      "number": 10006,
+      "name": "LAY BACK",
+      "category": "漢堡",
+      "area": "106臺北市大安區通安里通安街7號1樓",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/9qhyvc9uN4n1ExJH7"
+    },
+    {
+      "number": 10007,
+      "name": "waku waku burger",
+      "category": "漢堡",
+      "area": "110臺北市信義區景新里吳興街117號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/1tcMD3uz1wLXNBuA9"
+    },
+    {
+      "number": 10008,
+      "name": "塩琉 林森店",
+      "category": "拉麵",
+      "area": "104臺北市中山區正義里林森北路133巷7號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/7jcmMXfyrheetWA26"
+    },
+    {
+      "number": 10009,
+      "name": "隱家拉麵 南陽店",
+      "category": "拉麵",
+      "area": "100臺北市中正區黎明里南陽街15-7號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/YNzVwUBsfoKYGFCz6"
+    }
   ]
 }
