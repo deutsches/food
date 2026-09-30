@@ -90,6 +90,30 @@
       "area": "106臺北市大安區全安里安和路二段173號",
       "dishes": "",
       "mapUrl": "https://maps.app.goo.gl/EFNJwvcfhz4hVzKv7"
+    },
+    {
+      "number": 10012,
+      "name": "Lora Cake Basque Cheesecake",
+      "category": "甜點",
+      "area": "105臺北市松山區中華里敦化北路155巷6號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/wk5JgKwvZmc9oS2A9"
+    },
+    {
+      "number": 10013,
+      "name": "Delizioso",
+      "category": "義式",
+      "area": "104臺北市中山區江寧里建國北路二段151巷14號",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/YnUU17tdm5xGyve56"
+    },
+    {
+      "number": 10014ˇ,
+      "name": "EL Panino",
+      "category": "義式",
+      "area": "106臺北市大安區建倫里仁愛路四段151巷30號1樓",
+      "dishes": "",
+      "mapUrl": "https://maps.app.goo.gl/JxZU7pJtVpLg4tSx7"
     }
   ]
 }
